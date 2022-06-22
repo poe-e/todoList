@@ -83,7 +83,7 @@ h3{
 }
 .rate {
     float: left;
-    height: 46px;
+    height: px;
     padding: 0 10px;
 }
 .rate:not(:checked) > input {
@@ -92,7 +92,7 @@ h3{
 }
 .rate:not(:checked) > label {
     float:right;
-    width:1em;
+    width:20px;
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
@@ -100,7 +100,8 @@ h3{
     color:#ccc;
 }
 .rate:not(:checked) > label:before {
-    content: '★ ';
+    /* content: '★ '; */
+    content: '!';
 }
 .rate > input:checked ~ label {
     color: #eb0606;    

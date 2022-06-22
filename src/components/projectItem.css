@@ -1,0 +1,51 @@
+.projectItem{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 3px 0px 3px 15px;
+    margin-left: 30px;
+    margin-right: 0px;
+    border-radius: 5px;
+}
+.projectItem:hover{
+    background-color: #c7c7c7;
+}
+.project{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.priority{
+    margin-right: 10px;
+    color: red;
+    font-size: 20px;
+}
+#closeButton{
+    outline: none;
+    border: none;
+    display: none;
+    color: grey;
+    background-color: #c7c7c7;
+    cursor: pointer;
+    content: '\00d7';
+    font-size: 20px;
+}
+
+.projectItem:hover > div  > #close::after {
+    display: inline-block;
+    content: '\00d7';
+    cursor: pointer;
+}
+#close{
+    text-align: center;
+    align-items: center;
+    margin-right: 10px;
+    padding-bottom: 1px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.rightTask{
+    display: flex;
+}

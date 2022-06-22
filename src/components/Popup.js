@@ -7,15 +7,15 @@ const Popup = (props) =>{
         // console.log(e.target[0].value);
         // console.log(e.target[1].value);
         console.log(e.target[2].checked);
-        let priority = 'low';
+        let priority = 1;
         if(e.target[4].checked){
-            priority = 'low'
+            priority = 1
         }
         else if(e.target[3].checked){
-            priority = 'medium'
+            priority = 2
         }
         else if(e.target[2].checked){
-            priority = 'high'
+            priority = 3
         }
         let task = {
             description: e.target[0].value,
@@ -40,11 +40,11 @@ const Popup = (props) =>{
                     Priority
                     <div className="rate">
                         <input type="radio" id="star3" name="rate" value="3" />
-                        <label htmlFor="star3" title="text">3 stars</label>
+                        <label htmlFor="star3" title="text"></label>
                         <input type="radio" id="star2" name="rate" value="2" />
-                        <label htmlFor="star2" title="text">2 stars</label>
+                        <label htmlFor="star2" title="text"></label>
                         <input type="radio" id="star1" name="rate" value="1" />
-                        <label htmlFor="star1" title="text">1 star</label>
+                        <label htmlFor="star1" title="text"></label>
                     </div>
                     </div>
                     <button className='submitBook'  type='Submit'>Add</button>

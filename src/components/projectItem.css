@@ -25,27 +25,30 @@
 #closeButton{
     outline: none;
     border: none;
-    display: none;
+    /* display: none; */
     color: grey;
+    margin-right: 0px;
+    padding: 0px;
     background-color: #c7c7c7;
     cursor: pointer;
-    content: '\00d7';
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
-.projectItem:hover > div  > #close::after {
-    display: inline-block;
+.projectItem:hover  #closeButton::after {
+    display: block;
+    background-color: #c7c7c7;
     content: '\00d7';
     cursor: pointer;
-}
-#close{
-    text-align: center;
-    align-items: center;
-    margin-right: 10px;
-    padding-bottom: 1px;
+    padding-right: 7px;
+    padding-top: 2px;
+    padding-left: 0px;
     font-size: 20px;
-    font-weight: 500;
+}
+#closeButton:hover{
+    color: rgb(189, 7, 7);
 }
 .rightTask{
     display: flex;
+    justify-content: space-between;
+    width: 130px;
 }

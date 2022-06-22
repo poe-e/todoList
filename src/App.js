@@ -29,13 +29,18 @@ function App() {
     setPersonalProjects([...personalProjects]);
   }
   function submitTask(task){
-    let selectedProj = document.getElementsByClassName('projectSelected')[0].id;
+   // let selectedProj = document.getElementsByClassName('projectSelected')[0].id;
     currentProj.push(task)
-    localStorage.setItem(selectedProj, JSON.stringify(currentProj));
+    localStorage.setItem(projName, JSON.stringify(currentProj));
     setCurrentProj([...currentProj]);
     console.log(currentProj);
   }
-
+  function deleteTask(task){
+    console.log(projName)
+    currentProj.splice(task, 1);
+    localStorage.setItem(projName, JSON.stringify(currentProj))
+    setCurrentProj([...currentProj]);
+  }
   useEffect(()=>{
     const loadStorage = () =>{
       setCurrentProj(JSON.parse(localStorage.getItem(projName)) || []);
@@ -58,7 +63,7 @@ function App() {
         </div>
         <div className='todoListContainer'>
           <SelectedProject current={projName} submitTask={submitTask}/>
-          <ProjectItems currentProj={currentProj}/>
+          <ProjectItems currentProj={currentProj} deleteTask={deleteTask}/>
         </div>
       </div>
     </div>
